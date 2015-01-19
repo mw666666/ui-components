@@ -1,6 +1,6 @@
 /*
  * @author  qmw920@163.com
- * @home https://github.com/atian25/angular-lazyload
+ * @home https://github.com/qmw/angular-component
  */
 //定义App模块
 angular.module('components', []).config(['$compileProvider', '$controllerProvider', '$provide', '$filterProvider', function($compileProvider, $controllerProvider, $provide, $filterProvider) {

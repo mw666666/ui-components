@@ -47,14 +47,17 @@ angular.module('components', []).config(['$compileProvider', '$controllerProvide
 
     }
 
-    $compileProvider.directive('ngComponent', ['$compile', '$controller',
+    $compileProvider.directive('uiComponent', ['$compile', '$controller',
         function($compile, $controller) {
-            // console.log('my----ngController')
             return {
                 scope: true,
                 priority: 500,
                 link: function(scope, elem, attrs) {
                     var componentUrl = attrs.ngComponent;
+                    if('uiLoading' in attrs){
+                        elem.html('<div>加载中...</div>');
+                    }
+                    
                     try {
                         var componentFn = require(componentUrl);
                         if(componentFn){
@@ -70,14 +73,29 @@ angular.module('components', []).config(['$compileProvider', '$controllerProvide
 
                     function componentExec(componentFn){
                         if(!angular.isFunction(componentFn)){
-                            console.error('目前约定组件返回地址应该函数--组件地址:' + componentUrl);
-                        }                       
-
+                            console.error('约定组件返回地址应该函数--组件地址:' + componentUrl);
+                        }
+                        elem.html('');
                         componentFn(app, elem, attrs, scope);
                         $compile(elem.contents())(scope);
                         if(!scope.$$phase) {
                           scope.$apply();
-                        }                       
+                        }
+                        try{
+                            var componentName = getComponentName(componentUrl);
+                            _G = window._G = window._G || {};
+                            _G.myScope = _G.myScope || {};
+                            _G.myScope[componentName] = scope;                          
+                        }catch(e){
+
+                        }
+                        
+                    }
+
+                    function getComponentName(componentUrl){
+                        var last = componentUrl.lastIndexOf('/');
+                        var componentName = componentUrl.substr(last + 1);
+                        return componentName;
                     }
                 },
 

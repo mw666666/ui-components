@@ -1,6 +1,6 @@
 /*
  * @author  qmw920@163.com
- * @home https://github.com/qmw/angular-component
+ * @home https://github.com/qmw/ui-components
  */
 //定义App模块
 angular.module('ui-components', []).config(['$compileProvider', '$controllerProvider', '$provide', '$filterProvider', function($compileProvider, $controllerProvider, $provide, $filterProvider) {

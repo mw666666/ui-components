@@ -3,7 +3,7 @@
  * @home https://github.com/qmw/angular-component
  */
 //定义App模块
-angular.module('components', []).config(['$compileProvider', '$controllerProvider', '$provide', '$filterProvider', function($compileProvider, $controllerProvider, $provide, $filterProvider) {
+angular.module('ui-components', []).config(['$compileProvider', '$controllerProvider', '$provide', '$filterProvider', function($compileProvider, $controllerProvider, $provide, $filterProvider) {
     var cache = {};
     var app = {};
     var ngMap = {
@@ -53,7 +53,7 @@ angular.module('components', []).config(['$compileProvider', '$controllerProvide
                 scope: true,
                 priority: 500,
                 link: function(scope, elem, attrs) {
-                    var componentUrl = attrs.ngComponent;
+                    var componentUrl = attrs.uiComponent;
                     if('uiLoading' in attrs){
                         elem.html('<div class="component-spinner"> <div class="component-spinner-container component-container1"> <div class="circle1"></div> <div class="circle2"></div> <div class="circle3"></div> <div class="circle4"></div> </div> <div class="component-spinner-container component-container2"> <div class="circle1"></div> <div class="circle2"></div> <div class="circle3"></div> <div class="circle4"></div> </div> <div class="component-spinner-container component-container3"> <div class="circle1"></div> <div class="circle2"></div> <div class="circle3"></div> <div class="circle4"></div> </div> </div>');
                     }

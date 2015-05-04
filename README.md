@@ -3,7 +3,8 @@ ui-components
 基于requirejs
 angular组件式开发，按需加载组件, 根据组件延迟加载
 
-使用ui-component自动加载相关组件的controller、template、directive、等
+使用ui-component自动加载组件(组件有controller、template、directive等)
+
 配合ng-router或ui-router, 只需要把模板改成&lt;div ui-component="xxx/XXX" ui-loading&gt;&lt;/div&gt;
 ```
 ui-component 		是requirejs  define的模块，返回必须是函数

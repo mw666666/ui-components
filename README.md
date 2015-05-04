@@ -13,7 +13,9 @@ ui-loading			显示loading动画(组件加载完成前)
 
 用法
 -----
-页面或模板
+**1.引入ui-components.js文件**
+
+**2.页面或模板**
 ```html
 	<h2>登录组件</h2>
 	<div ui-component="user/Login"></div>
@@ -23,8 +25,12 @@ ui-loading			显示loading动画(组件加载完成前)
 
 
 ```	
-js调用
+**3.js调用**
 ```js
 	var app = angular.module('app', ['ui-components']);
 	angular.bootstrap(document.body, ['app']);
 ```
+
+Demo
+-----
+sdemo/index.html

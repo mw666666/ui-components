@@ -35,3 +35,6 @@ ui-loading			显示loading动画(组件加载完成前)
 Demo
 -----
 sdemo/index.html
+
+
+## 更多demo 请看SDemo或访问<a href="http://www.sdemo.cn">www.sdemo.cn</a>

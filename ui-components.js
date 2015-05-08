@@ -1,8 +1,10 @@
 /*
  * @author  qmw920@163.com
  * @home https://github.com/qmw/ui-components
+ * License: MIT
  */
-//定义App模块
+
+
 angular.module('ui-components', []).config(['$compileProvider', '$controllerProvider', '$provide', '$filterProvider', function($compileProvider, $controllerProvider, $provide, $filterProvider) {
     var cache = {};
     var app = {};
@@ -87,7 +89,7 @@ angular.module('ui-components', []).config(['$compileProvider', '$controllerProv
                             _G.myScope = _G.myScope || {};
                             _G.myScope[componentName] = scope;                          
                         }catch(e){
-
+                            console.log('设置_G.myScope.componentName错误')
                         }
                         
                     }

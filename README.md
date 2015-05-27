@@ -37,5 +37,5 @@ Demo
 sdemo/index.html
 
 
-更多demo 请访问<a href="http://sdemos.duapp.com/">SDemo</a> (<a href="hhttp://sdemos.duapp.com/">www.sdemo.cn</a>)
+更多demo 请访问<a href="http://sdemos.duapp.com/">SDemo</a> (<a href="http://sdemos.duapp.com/">www.sdemo.cn</a>)
 -----
